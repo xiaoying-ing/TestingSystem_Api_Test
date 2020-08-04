@@ -1,0 +1,126 @@
+2020-08-04 15:24:35,689-xiaoyin_log-INFO-37 line-==================注册模块接口测试开始==================
+2020-08-04 15:24:35,690-xiaoyin_log-INFO-40 line-==================接口用例执行开始==================
+2020-08-04 15:24:35,690-xiaoyin_log-INFO-45 line-==================用例1执行开始==================
+2020-08-04 15:24:36,065-xiaoyin_log-INFO-53 line-请求头为：{'Content-Type': 'application/json'}
+2020-08-04 15:24:36,065-xiaoyin_log-INFO-54 line-请求方法为：POST
+2020-08-04 15:24:36,066-xiaoyin_log-INFO-55 line-请求url为：http://api.keyou.site:8000/user/register/
+2020-08-04 15:24:36,066-xiaoyin_log-INFO-56 line-请求数据为：{'username': 'Q2yX5E', 'email': '6FdB4Ud@126.com', 'password': '17kbb3', 'password_confirm': '17kbb3'}
+2020-08-04 15:24:36,268-xiaoyin_log-INFO-65 line-响应状态码：201
+2020-08-04 15:24:36,268-xiaoyin_log-INFO-66 line-响应数据：{'id': 105, 'username': 'Q2yX5E', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMDUsInVzZXJuYW1lIjoiUTJ5WDVFIiwiZXhwIjoxNTk2NjEyMjc2LCJlbWFpbCI6IjZGZEI0VWRAMTI2LmNvbSJ9.NQiVjLu4QRZgu5NNc8fwq0SHt19bJsYT6IfjfAs-1qs'}
+2020-08-04 15:24:36,268-xiaoyin_log-INFO-55 line-实际结果为：{'id': 105, 'username': 'Q2yX5E', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMDUsInVzZXJuYW1lIjoiUTJ5WDVFIiwiZXhwIjoxNTk2NjEyMjc2LCJlbWFpbCI6IjZGZEI0VWRAMTI2LmNvbSJ9.NQiVjLu4QRZgu5NNc8fwq0SHt19bJsYT6IfjfAs-1qs'}
+2020-08-04 15:24:36,336-xiaoyin_log-INFO-59 line-最终的测试数据为：{'case_id': 1, 'case_tittle': '用户名6位字符-email格式正确-6位密码-注册成功', 'random_username_len': 6, 'random_password_len': 6, 'url': '/user/register/', 'method': 'POST', 'request_data': '{"username":"Q2yX5E","email":"6FdB4Ud@126.com","password":"17kbb3","password_confirm":"17kbb3"}', 'status_code': 201, 'expect_res': '{"id":"105","username":"Q2yX5E"}', 'check_sql': 'SELECT id FROM auth_user WHERE username="Q2yX5E"', '备注': None}
+2020-08-04 15:24:36,337-xiaoyin_log-INFO-61 line-期望结果为：{'id': '105', 'username': 'Q2yX5E'}
+2020-08-04 15:24:36,337-xiaoyin_log-INFO-72 line-==================用例结束==================
+2020-08-04 15:24:36,337-xiaoyin_log-INFO-75 line-==================接口用例执行结束==================
+2020-08-04 15:24:36,337-xiaoyin_log-INFO-40 line-==================接口用例执行开始==================
+2020-08-04 15:24:36,337-xiaoyin_log-INFO-45 line-==================用例2执行开始==================
+2020-08-04 15:24:36,713-xiaoyin_log-INFO-53 line-请求头为：{'Content-Type': 'application/json'}
+2020-08-04 15:24:36,713-xiaoyin_log-INFO-54 line-请求方法为：POST
+2020-08-04 15:24:36,714-xiaoyin_log-INFO-55 line-请求url为：http://api.keyou.site:8000/user/register/
+2020-08-04 15:24:36,714-xiaoyin_log-INFO-56 line-请求数据为：{'username': '02x_k', 'email': '4uEmxEc3s@qq.com', 'password': 'H-End+', 'password_confirm': 'H-End+'}
+2020-08-04 15:24:36,786-xiaoyin_log-INFO-65 line-响应状态码：400
+2020-08-04 15:24:36,786-xiaoyin_log-INFO-66 line-响应数据：{'username': ['仅允许6-20个字符的用户名']}
+2020-08-04 15:24:36,786-xiaoyin_log-INFO-55 line-实际结果为：{'username': ['仅允许6-20个字符的用户名']}
+2020-08-04 15:24:36,786-xiaoyin_log-INFO-61 line-期望结果为：{'username': ['仅允许6-20个字符的用户名']}
+2020-08-04 15:24:36,786-xiaoyin_log-INFO-72 line-==================用例结束==================
+2020-08-04 15:24:36,787-xiaoyin_log-INFO-75 line-==================接口用例执行结束==================
+2020-08-04 15:24:36,787-xiaoyin_log-INFO-40 line-==================接口用例执行开始==================
+2020-08-04 15:24:36,787-xiaoyin_log-INFO-45 line-==================用例3执行开始==================
+2020-08-04 15:24:37,171-xiaoyin_log-INFO-53 line-请求头为：{'Content-Type': 'application/json'}
+2020-08-04 15:24:37,171-xiaoyin_log-INFO-54 line-请求方法为：POST
+2020-08-04 15:24:37,172-xiaoyin_log-INFO-55 line-请求url为：http://api.keyou.site:8000/user/register/
+2020-08-04 15:24:37,172-xiaoyin_log-INFO-56 line-请求数据为：{'username': '9je4F45Cy85ccbkiX0yN', 'email': 'IUAalO@189.com', 'password': 'mGL9Hm', 'password_confirm': 'mGL9Hm'}
+2020-08-04 15:24:37,378-xiaoyin_log-INFO-65 line-响应状态码：201
+2020-08-04 15:24:37,379-xiaoyin_log-INFO-66 line-响应数据：{'id': 106, 'username': '9je4F45Cy85ccbkiX0yN', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMDYsInVzZXJuYW1lIjoiOWplNEY0NUN5ODVjY2JraVgweU4iLCJleHAiOjE1OTY2MTIyNzcsImVtYWlsIjoiSVVBYWxPQDE4OS5jb20ifQ.RHAuGWEMJf3j5XU85BCpk2JenUje3YN90hUwAhQmEOQ'}
+2020-08-04 15:24:37,379-xiaoyin_log-INFO-55 line-实际结果为：{'id': 106, 'username': '9je4F45Cy85ccbkiX0yN', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMDYsInVzZXJuYW1lIjoiOWplNEY0NUN5ODVjY2JraVgweU4iLCJleHAiOjE1OTY2MTIyNzcsImVtYWlsIjoiSVVBYWxPQDE4OS5jb20ifQ.RHAuGWEMJf3j5XU85BCpk2JenUje3YN90hUwAhQmEOQ'}
+2020-08-04 15:24:37,446-xiaoyin_log-INFO-59 line-最终的测试数据为：{'case_id': 3, 'case_tittle': '用户名20位字符-email格式正确-6位密码-注册成功', 'random_username_len': 20, 'random_password_len': 6, 'url': '/user/register/', 'method': 'POST', 'request_data': '{"username":"9je4F45Cy85ccbkiX0yN","email":"IUAalO@189.com","password":"mGL9Hm","password_confirm":"mGL9Hm"}', 'status_code': 201, 'expect_res': '{"id":"106","username":"9je4F45Cy85ccbkiX0yN"}', 'check_sql': 'SELECT id FROM auth_user WHERE username="9je4F45Cy85ccbkiX0yN"', '备注': None}
+2020-08-04 15:24:37,447-xiaoyin_log-INFO-61 line-期望结果为：{'id': '106', 'username': '9je4F45Cy85ccbkiX0yN'}
+2020-08-04 15:24:37,447-xiaoyin_log-INFO-72 line-==================用例结束==================
+2020-08-04 15:24:37,447-xiaoyin_log-INFO-75 line-==================接口用例执行结束==================
+2020-08-04 15:24:37,447-xiaoyin_log-INFO-40 line-==================接口用例执行开始==================
+2020-08-04 15:24:37,447-xiaoyin_log-INFO-45 line-==================用例4执行开始==================
+2020-08-04 15:24:37,816-xiaoyin_log-INFO-53 line-请求头为：{'Content-Type': 'application/json'}
+2020-08-04 15:24:37,816-xiaoyin_log-INFO-54 line-请求方法为：POST
+2020-08-04 15:24:37,816-xiaoyin_log-INFO-55 line-请求url为：http://api.keyou.site:8000/user/register/
+2020-08-04 15:24:37,816-xiaoyin_log-INFO-56 line-请求数据为：{'username': 'testregister', 'email': 'OttdNz71Gg@189.com', 'password': '3MbpDD', 'password_co6nfirm': '3MbpDD'}
+2020-08-04 15:24:37,889-xiaoyin_log-INFO-65 line-响应状态码：400
+2020-08-04 15:24:37,889-xiaoyin_log-INFO-66 line-响应数据：{'username': ['已存在一位使用该名字的用户。'], 'password_confirm': ['该字段是必填项。']}
+2020-08-04 15:24:37,889-xiaoyin_log-INFO-55 line-实际结果为：{'username': ['已存在一位使用该名字的用户。'], 'password_confirm': ['该字段是必填项。']}
+2020-08-04 15:24:37,889-xiaoyin_log-INFO-61 line-期望结果为：{'username': ['已存在一位使用该名字的用户。']}
+2020-08-04 15:24:37,889-xiaoyin_log-INFO-72 line-==================用例结束==================
+2020-08-04 15:24:37,889-xiaoyin_log-INFO-75 line-==================接口用例执行结束==================
+2020-08-04 15:24:37,889-xiaoyin_log-INFO-40 line-==================接口用例执行开始==================
+2020-08-04 15:24:37,889-xiaoyin_log-INFO-45 line-==================用例5执行开始==================
+2020-08-04 15:24:38,252-xiaoyin_log-INFO-53 line-请求头为：{'Content-Type': 'application/json'}
+2020-08-04 15:24:38,252-xiaoyin_log-INFO-54 line-请求方法为：POST
+2020-08-04 15:24:38,252-xiaoyin_log-INFO-55 line-请求url为：http://api.keyou.site:8000/user/register/
+2020-08-04 15:24:38,252-xiaoyin_log-INFO-56 line-请求数据为：{'username': 'kc.Y_0ae', 'email': 'jhOWFD@qq.com', 'password': 'c_B48l', 'password_confirm': 'c_B48l'}
+2020-08-04 15:24:38,460-xiaoyin_log-INFO-65 line-响应状态码：201
+2020-08-04 15:24:38,461-xiaoyin_log-INFO-66 line-响应数据：{'id': 107, 'username': 'kc.Y_0ae', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMDcsInVzZXJuYW1lIjoia2MuWV8wYWUiLCJleHAiOjE1OTY2MTIyNzgsImVtYWlsIjoiamhPV0ZEQHFxLmNvbSJ9.CfiO0QPGynjBmlDp4hLxhZW0n7f_2I-orG3nRZj8zaE'}
+2020-08-04 15:24:38,461-xiaoyin_log-INFO-55 line-实际结果为：{'id': 107, 'username': 'kc.Y_0ae', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMDcsInVzZXJuYW1lIjoia2MuWV8wYWUiLCJleHAiOjE1OTY2MTIyNzgsImVtYWlsIjoiamhPV0ZEQHFxLmNvbSJ9.CfiO0QPGynjBmlDp4hLxhZW0n7f_2I-orG3nRZj8zaE'}
+2020-08-04 15:24:38,528-xiaoyin_log-INFO-59 line-最终的测试数据为：{'case_id': 5, 'case_tittle': '用户名8位字符-email格式正确-6位密码-注册成功', 'random_username_len': 8, 'random_password_len': 6, 'url': '/user/register/', 'method': 'POST', 'request_data': '{"username":"kc.Y_0ae","email":"jhOWFD@qq.com","password":"c_B48l","password_confirm":"c_B48l"}', 'status_code': 201, 'expect_res': '{"id":"107","username":"kc.Y_0ae"}', 'check_sql': 'SELECT id FROM auth_user WHERE username="kc.Y_0ae"', '备注': None}
+2020-08-04 15:24:38,528-xiaoyin_log-INFO-61 line-期望结果为：{'id': '107', 'username': 'kc.Y_0ae'}
+2020-08-04 15:24:38,528-xiaoyin_log-INFO-72 line-==================用例结束==================
+2020-08-04 15:24:38,528-xiaoyin_log-INFO-75 line-==================接口用例执行结束==================
+2020-08-04 15:24:38,528-xiaoyin_log-INFO-40 line-==================接口用例执行开始==================
+2020-08-04 15:24:38,528-xiaoyin_log-INFO-45 line-==================用例6执行开始==================
+2020-08-04 15:24:38,910-xiaoyin_log-INFO-53 line-请求头为：{'Content-Type': 'application/json'}
+2020-08-04 15:24:38,910-xiaoyin_log-INFO-54 line-请求方法为：POST
+2020-08-04 15:24:38,910-xiaoyin_log-INFO-55 line-请求url为：http://api.keyou.site:8000/user/register/
+2020-08-04 15:24:38,910-xiaoyin_log-INFO-56 line-请求数据为：{'username': 'xNTqzdNp', 'email': '88855', 'password': 'vKhq+F', 'password_confirm': 'vKhq+F'}
+2020-08-04 15:24:38,986-xiaoyin_log-INFO-65 line-响应状态码：400
+2020-08-04 15:24:38,986-xiaoyin_log-INFO-66 line-响应数据：{'email': ['请输入合法的邮件地址。']}
+2020-08-04 15:24:38,986-xiaoyin_log-INFO-55 line-实际结果为：{'email': ['请输入合法的邮件地址。']}
+2020-08-04 15:24:38,986-xiaoyin_log-INFO-61 line-期望结果为：{'email': ['请输入合法的邮件地址。']}
+2020-08-04 15:24:38,987-xiaoyin_log-INFO-72 line-==================用例结束==================
+2020-08-04 15:24:38,987-xiaoyin_log-INFO-75 line-==================接口用例执行结束==================
+2020-08-04 15:24:38,987-xiaoyin_log-INFO-40 line-==================接口用例执行开始==================
+2020-08-04 15:24:38,987-xiaoyin_log-INFO-45 line-==================用例7执行开始==================
+2020-08-04 15:24:39,372-xiaoyin_log-INFO-53 line-请求头为：{'Content-Type': 'application/json'}
+2020-08-04 15:24:39,372-xiaoyin_log-INFO-54 line-请求方法为：POST
+2020-08-04 15:24:39,372-xiaoyin_log-INFO-55 line-请求url为：http://api.keyou.site:8000/user/register/
+2020-08-04 15:24:39,372-xiaoyin_log-INFO-56 line-请求数据为：{'username': 'N94bS4', 'email': 'ZyAI@126.com', 'password': 'hObnt', 'password_confirm': 'hObnt'}
+2020-08-04 15:24:39,454-xiaoyin_log-INFO-65 line-响应状态码：400
+2020-08-04 15:24:39,454-xiaoyin_log-INFO-66 line-响应数据：{'password': ['仅允许6-20个字符的密码'], 'password_confirm': ['仅允许6~20个字符的确认密码']}
+2020-08-04 15:24:39,455-xiaoyin_log-INFO-55 line-实际结果为：{'password': ['仅允许6-20个字符的密码'], 'password_confirm': ['仅允许6~20个字符的确认密码']}
+2020-08-04 15:24:39,455-xiaoyin_log-INFO-61 line-期望结果为：{'password': ['仅允许6-20个字符的密码'], 'password_confirm': ['仅允许6~20个字符的确认密码']}
+2020-08-04 15:24:39,455-xiaoyin_log-INFO-72 line-==================用例结束==================
+2020-08-04 15:24:39,455-xiaoyin_log-INFO-75 line-==================接口用例执行结束==================
+2020-08-04 15:24:39,455-xiaoyin_log-INFO-40 line-==================接口用例执行开始==================
+2020-08-04 15:24:39,455-xiaoyin_log-INFO-45 line-==================用例8执行开始==================
+2020-08-04 15:24:39,842-xiaoyin_log-INFO-53 line-请求头为：{'Content-Type': 'application/json'}
+2020-08-04 15:24:39,843-xiaoyin_log-INFO-54 line-请求方法为：POST
+2020-08-04 15:24:39,843-xiaoyin_log-INFO-55 line-请求url为：http://api.keyou.site:8000/user/register/
+2020-08-04 15:24:39,843-xiaoyin_log-INFO-56 line-请求数据为：{'username': 'iheiSs', 'email': 'dzuXg@126.com', 'password': 'wbcZqDB7y34MNj9y4wK1', 'password_confirm': 'wbcZqDB7y34MNj9y4wK1'}
+2020-08-04 15:24:40,035-xiaoyin_log-INFO-65 line-响应状态码：201
+2020-08-04 15:24:40,035-xiaoyin_log-INFO-66 line-响应数据：{'id': 108, 'username': 'iheiSs', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMDgsInVzZXJuYW1lIjoiaWhlaVNzIiwiZXhwIjoxNTk2NjEyMjc5LCJlbWFpbCI6ImR6dVhnQDEyNi5jb20ifQ.eJAgcurKgqA7VR5SXk0Z_HkA7m0yNkHxsdhjqc9EjD0'}
+2020-08-04 15:24:40,035-xiaoyin_log-INFO-55 line-实际结果为：{'id': 108, 'username': 'iheiSs', 'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMDgsInVzZXJuYW1lIjoiaWhlaVNzIiwiZXhwIjoxNTk2NjEyMjc5LCJlbWFpbCI6ImR6dVhnQDEyNi5jb20ifQ.eJAgcurKgqA7VR5SXk0Z_HkA7m0yNkHxsdhjqc9EjD0'}
+2020-08-04 15:24:40,103-xiaoyin_log-INFO-59 line-最终的测试数据为：{'case_id': 8, 'case_tittle': '用户名6位字符-email格式正确-20位密码-注册成功', 'random_username_len': 6, 'random_password_len': 20, 'url': '/user/register/', 'method': 'POST', 'request_data': '{"username":"iheiSs","email":"dzuXg@126.com","password":"wbcZqDB7y34MNj9y4wK1","password_confirm":"wbcZqDB7y34MNj9y4wK1"}', 'status_code': 201, 'expect_res': '{"id":"108","username":"iheiSs"}', 'check_sql': 'SELECT id FROM auth_user WHERE username="iheiSs"', '备注': None}
+2020-08-04 15:24:40,103-xiaoyin_log-INFO-61 line-期望结果为：{'id': '108', 'username': 'iheiSs'}
+2020-08-04 15:24:40,104-xiaoyin_log-INFO-72 line-==================用例结束==================
+2020-08-04 15:24:40,104-xiaoyin_log-INFO-75 line-==================接口用例执行结束==================
+2020-08-04 15:24:40,104-xiaoyin_log-INFO-40 line-==================接口用例执行开始==================
+2020-08-04 15:24:40,104-xiaoyin_log-INFO-45 line-==================用例9执行开始==================
+2020-08-04 15:24:40,489-xiaoyin_log-INFO-53 line-请求头为：{'Content-Type': 'application/json'}
+2020-08-04 15:24:40,489-xiaoyin_log-INFO-54 line-请求方法为：POST
+2020-08-04 15:24:40,489-xiaoyin_log-INFO-55 line-请求url为：http://api.keyou.site:8000/user/register/
+2020-08-04 15:24:40,489-xiaoyin_log-INFO-56 line-请求数据为：{'username': '7Fi-ny', 'email': 'czrK1yHo@163.com', 'password': '+Dxit0TLEOF01c_V+QVzU', 'password_confirm': '+Dxit0TLEOF01c_V+QVzU'}
+2020-08-04 15:24:40,567-xiaoyin_log-INFO-65 line-响应状态码：400
+2020-08-04 15:24:40,567-xiaoyin_log-INFO-66 line-响应数据：{'password': ['仅允许6-20个字符的密码'], 'password_confirm': ['仅允许6~20个字符的确认密码']}
+2020-08-04 15:24:40,567-xiaoyin_log-INFO-55 line-实际结果为：{'password': ['仅允许6-20个字符的密码'], 'password_confirm': ['仅允许6~20个字符的确认密码']}
+2020-08-04 15:24:40,567-xiaoyin_log-INFO-61 line-期望结果为：{'password': ['仅允许6-20个字符的密码'], 'password_confirm': ['仅允许6~20个字符的确认密码']}
+2020-08-04 15:24:40,567-xiaoyin_log-INFO-72 line-==================用例结束==================
+2020-08-04 15:24:40,567-xiaoyin_log-INFO-75 line-==================接口用例执行结束==================
+2020-08-04 15:24:40,567-xiaoyin_log-INFO-40 line-==================接口用例执行开始==================
+2020-08-04 15:24:40,568-xiaoyin_log-INFO-45 line-==================用例10执行开始==================
+2020-08-04 15:24:40,949-xiaoyin_log-INFO-53 line-请求头为：{'Content-Type': 'application/json'}
+2020-08-04 15:24:40,949-xiaoyin_log-INFO-54 line-请求方法为：POST
+2020-08-04 15:24:40,949-xiaoyin_log-INFO-55 line-请求url为：http://api.keyou.site:8000/user/register/
+2020-08-04 15:24:40,949-xiaoyin_log-INFO-56 line-请求数据为：{'username': 'V4dmBY', 'email': 'nuWd@126.com', 'password': '123456', 'password_confirm': '123457'}
+2020-08-04 15:24:41,024-xiaoyin_log-INFO-65 line-响应状态码：400
+2020-08-04 15:24:41,024-xiaoyin_log-INFO-66 line-响应数据：{'non_field_errors': ['两次输入密码不正确']}
+2020-08-04 15:24:41,024-xiaoyin_log-INFO-55 line-实际结果为：{'non_field_errors': ['两次输入密码不正确']}
+2020-08-04 15:24:41,024-xiaoyin_log-INFO-61 line-期望结果为：{'non_field_errors': ['两次输入密码不正确']}
+2020-08-04 15:24:41,024-xiaoyin_log-INFO-72 line-==================用例结束==================
+2020-08-04 15:24:41,024-xiaoyin_log-INFO-75 line-==================接口用例执行结束==================
+2020-08-04 15:24:41,025-xiaoyin_log-INFO-79 line-==================注册模块接口测试结束==================
