@@ -25,5 +25,7 @@ class HandleConfig(ConfigParser):
 
 red_conf = HandleConfig("xiaoyin.ini")
 red_conf.red_conf__()
+
+# 日志模块用到的属性
 log_data_list = [red_conf.get("log", "log_name"), red_conf.get("log", "log_level"), red_conf.getboolean("log", "file")]
 # print(log_data_list)
