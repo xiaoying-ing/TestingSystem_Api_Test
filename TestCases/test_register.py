@@ -25,10 +25,10 @@ from Common.handle_case_relpace_data import replace_mark_with_data
 from Common.handle_random_username_email_password import get_new_username, get_password, get_new_email
 
 db = HandleDB()
-REPLACE_USERNAME = "#username#"
-REPLACE_PASSWORD = "#password#"
-REPLACE_EMAIL = "#email#"
-REPLACE_ID = "#id#"
+REPLACE_USERNAME_MARK = "#username#"
+REPLACE_PASSWORD_MARK = "#password#"
+REPLACE_EMAIL_MARK = "#email#"
+REPLACE_ID_MARK = "#id#"
 
 @ddt
 class TestRegister(unittest.TestCase):
@@ -47,15 +47,15 @@ class TestRegister(unittest.TestCase):
             username = get_new_username(int(cases["random_username_len"]))
             password = get_password(int(cases["random_password_len"]))
             email = get_new_email()
-            cases = replace_mark_with_data(cases, REPLACE_USERNAME, username)
-            cases = replace_mark_with_data(cases, REPLACE_PASSWORD, password)
-            cases = replace_mark_with_data(cases, REPLACE_EMAIL, email)
+            cases = replace_mark_with_data(cases, REPLACE_USERNAME_MARK, username)
+            cases = replace_mark_with_data(cases, REPLACE_PASSWORD_MARK, password)
+            cases = replace_mark_with_data(cases, REPLACE_EMAIL_MARK, email)
 
         response_register = set_request(cases["url"], cases["method"], cases["request_data"])
         myLogger.info("实际结果为：{}".format(response_register.json()))
         if cases["check_sql"]:
             user_id = db.select_one_data(cases["check_sql"])["id"]
-            cases = replace_mark_with_data(cases, REPLACE_ID, str(user_id))
+            cases = replace_mark_with_data(cases, REPLACE_ID_MARK, str(user_id))
             myLogger.info("最终的测试数据为：{}".format(cases))
         expected = json.loads(cases['expect_res'])
         myLogger.info("期望结果为：{}".format(expected))
