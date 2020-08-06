@@ -34,35 +34,38 @@ class read_test_datas:
 
 
 test_table_name = "TestSystem_api_Testcase.xlsx"
-sheet_name_list = ["register", "isregister"]
+sheet_name_list = ["register", "isregister", "is_email_register"]
 test_register = read_test_datas(test_table_name, sheet_name_list[0])
 test_register_datas = test_register.obtain_datas()
 
 test_isregister = read_test_datas(test_table_name, sheet_name_list[1])
 test_isregister_datas = test_isregister.obtain_datas()
 
+test_is_email_register = read_test_datas(test_table_name, sheet_name_list[2])
+test_is_email_register_datas = test_is_email_register.obtain_datas()
+
 if __name__ == '__main__':
     from Common.handle_random_username_email_password import get_new_email, get_password, get_new_username
     from Common.handle_case_relpace_data import replace_mark_with_data
     from Common.handle_conf import red_conf
-    REPLACE_NOREGISTER_USERNAME = "#username#"
-    REPLACE_REGISTER_USERNAME = "$username$"
+    REPLACE_NOREGISTER_EMAIL_MARK = "#email#"
+    REPLACE_REGISTER_EMAIL_MARK = "$email$"
     # REPLACE_PASSWORD = "#password#"
     # REPLACE_EMAIL = "#email#"
     # REPLACE_ID = "#id#"
     # pprint(test_isregister_datas)
-    case = test_isregister_datas
+    case = test_is_email_register_datas
     for cases in case:
-        if cases["url"].find(REPLACE_NOREGISTER_USERNAME) != -1:
-            username = get_new_username(int(cases["random_username_len"]))
+        if cases["url"].find(REPLACE_NOREGISTER_EMAIL_MARK) != -1:
+            email = get_new_email()
     #         password = get_password(int(cases["random_password_len"]))
     #         email = get_new_email()
-            cases = replace_mark_with_data(cases, REPLACE_NOREGISTER_USERNAME, username)
+            cases = replace_mark_with_data(cases, REPLACE_NOREGISTER_EMAIL_MARK, email)
     #         cases = replace_mark_with_data(cases, REPLACE_PASSWORD, password)
     #         cases = replace_mark_with_data(cases, REPLACE_EMAIL, email)
-        elif cases["url"].find(REPLACE_REGISTER_USERNAME) != -1:
-            username = red_conf.get("register_user", "username")
-            cases = replace_mark_with_data(cases, REPLACE_REGISTER_USERNAME, username)
+        elif cases["url"].find(REPLACE_REGISTER_EMAIL_MARK) != -1:
+            email = red_conf.get("register_user", "email")
+            cases = replace_mark_with_data(cases, REPLACE_REGISTER_EMAIL_MARK, email)
         else:
             pass
     pprint(case)
