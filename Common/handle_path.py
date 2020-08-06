@@ -25,4 +25,4 @@ test_datas_dir = os.path.join(base_dir, "TestDatas")  # 测试数据的目录
 reports_dir = os.path.join(base_dir, "OutPuts\\reports")  # 测试报告目录
 logs_dir = os.path.join(base_dir, "OutPuts\\logs")  # 日志文件目录
 conf_dir = os.path.join(base_dir, "Conf")  # 配置文件的目录
-local_time = time.strftime('%Y%m%d-%H%M', time.localtime(time.time()))  # 格式化本地时间
+local_time = time.strftime('%Y-%m-%d', time.localtime(time.time()))  # 格式化本地时间
