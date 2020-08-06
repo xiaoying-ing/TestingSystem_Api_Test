@@ -32,7 +32,7 @@ class CustomizeLogger(logging.Logger):
         self.addHandler(handle_con)  # 创建控制台日志输出
 
         if file:
-            file_log_name = name + "-" + local_time
+            file_log_name = local_time + "-" + name
             file = file_log_name + ".log"
             file = os.path.join(logs_dir, file)
             handle_file = logging.FileHandler(file, encoding="utf-8")
