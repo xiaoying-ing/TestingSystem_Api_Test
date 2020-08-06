@@ -30,7 +30,7 @@ REPLACE_NOREGISTER_USERNAME_MARK = "#username#"
 REPLACE_REGISTER_USERNAME_MARK = "$username$"
 
 @ddt
-class TestIsRegister(unittest.TestCase):
+class TestIsUsernameRegister(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         myLogger.info("==================确认用户注册模块接口测试开始==================")
