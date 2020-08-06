@@ -62,7 +62,7 @@ def get_new_email():
 
 
 def __generator_string(length):
-    all_str = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_.+-"
+    all_str = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
     random_string_list = []
     for _ in range(length):
         random_string_list.append(random.choice(all_str))
