@@ -33,7 +33,7 @@ REPLACE_REGISTER_USERNAME_MARK = "$username$"
 class TestIsRegister(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        myLogger.info("==================确认注册模块接口测试开始==================")
+        myLogger.info("==================确认用户注册模块接口测试开始==================")
         register_username = red_conf.get("register_user", "username")
         register_email = red_conf.get("register_user", "email")
         register_pwd = red_conf.get("register_user", "password")
@@ -78,7 +78,7 @@ class TestIsRegister(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls) -> None:
-        myLogger.info("==================确认注册模块接口测试结束==================")
+        myLogger.info("==================确认用户注册模块接口测试结束==================")
 
 
 
