@@ -50,10 +50,10 @@ def set_request(url, method, data=None, params_format="json", token=None):
     headers = __handle_headers(token)
     url = __pre_url(url)
     data = __per_data(data)
-    myLogger.info("请求头为：{}".format(headers))
-    myLogger.info("请求方法为：{}".format(method))
-    myLogger.info("请求url为：{}".format(url))
-    myLogger.info("请求数据为：{}".format(data))
+    myLogger.info("请求头为:{}".format(headers))
+    myLogger.info("请求方法为:{}".format(method))
+    myLogger.info("请求url为:{}".format(url))
+    myLogger.info("请求数据为:{}".format(data))
     method = method.upper()
     if method == "POST":
         if params_format == "json":
