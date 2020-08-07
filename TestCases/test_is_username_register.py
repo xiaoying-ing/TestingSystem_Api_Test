@@ -37,7 +37,8 @@ class TestIsUsernameRegister(unittest.TestCase):
         register_username = red_conf.get("register_user", "username")
         register_email = red_conf.get("register_user", "email")
         register_pwd = red_conf.get("register_user", "password")
-        request_register_data = {"username": register_username, "email": register_email, "password": register_pwd, "password_confirm": register_pwd}
+        request_register_data = {"username": register_username, "email": register_email, "password": register_pwd,
+                                 "password_confirm": register_pwd}
         register_url = "/user/register/"
         set_request(register_url, "POST", request_register_data)
 
