@@ -66,6 +66,18 @@ class TestRegister(unittest.TestCase):
             if cases["check_sql"]:
                 self.assertEqual(response_register.json()["id"], int(expected["id"]))
                 self.assertEqual(response_register.json()["username"], expected["username"])
+            try:
+                if expected["non_field_errors"]:
+                    self.assertEqual(response_register.json()["non_field_errors"], expected["non_field_errors"])
+                elif expected["username"]:
+                    self.assertEqual(response_register.json(["usrename"]), expected["username"])
+                elif expected["email"]:
+                    self.assertEqual(response_register.json(["email"]), expected["email"])
+                elif expected["password"]:
+                    self.assertEqual(response_register.json(["password"]), expected["password"])
+                    self.assertEqual(response_register.json()["password_confirm"], expected["password_confirm"])
+            except KeyError:
+                pass
         except AssertionError:
             myLogger.info("用例执行失败")
             raise
