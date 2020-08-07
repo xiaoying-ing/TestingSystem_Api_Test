@@ -34,6 +34,13 @@ class TestIsEmailRegister(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         myLogger.info("==================确认邮箱注册模块接口测试开始==================")
+        register_username = red_conf.get("register_user", "username")
+        register_email = red_conf.get("register_user", "email")
+        register_pwd = red_conf.get("register_user", "password")
+        request_register_data = {"username": register_username, "email": register_email, "password": register_pwd,
+                                 "password_confirm": register_pwd}
+        register_url = "/user/register/"
+        set_request(register_url, "POST", request_register_data)
 
     def setUp(self) -> None:
         myLogger.info("==================接口用例执行开始==================")
