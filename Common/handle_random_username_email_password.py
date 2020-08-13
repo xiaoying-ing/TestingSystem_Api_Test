@@ -33,6 +33,16 @@ def get_password(password_len):
     return password
 
 
+def get_new_projects_datas(datas_len):
+    db = HandleDB()
+    while True:
+        datas = __generator_string(datas_len)
+        count = db.get_count('SELECT * FROM tb_projects WHERE name="{}"'.format(datas))
+        if count == 0:
+            db.close()
+            return datas
+
+
 def get_new_email():
     db = HandleDB()
     while True:
@@ -43,6 +53,7 @@ def get_new_email():
         if count == 0:  # 如果email没有在数据库查到。表示是未注册的email。
             db.close()
             return email
+
 
 # def get_old_phone():
 #     '''
