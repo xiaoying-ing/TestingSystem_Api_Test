@@ -55,21 +55,22 @@ def get_new_email():
             return email
 
 
-# def get_old_phone():
-#     '''
-#     从配置文件获取指定的用户名和密码
-#     确保此帐号，在系统当中是注册了的。
-#     返回：用户名和密码。
-#     :return:
-#     '''
-#     from Common.handle_conf import red_conf
-#     from Common.handle_requests import set_request
-#     user = red_conf.get("general_user", "user")
-#     password = red_conf.get("general_user", "password")
-#     # 如果数据库查找到user，就直接返回。如果没有，则调用注册接口注册一个。
-#     # 不管注册与否，直接调用注册接口。
-#     set_request("member/register", "post", {"mobile_phone": user, "pwd": password})
-#     return user, password
+def get_old_user():
+    '''
+    从配置文件获取指定的用户名和密码
+    确保此帐号，在系统当中是注册了的。
+    返回：用户名和密码。
+    :return:
+    '''
+    from Common.handle_conf import red_conf
+    from Common.handle_requests import set_request
+    user = red_conf.get("register_user", "username")
+    password = red_conf.get("register_user", "password")
+    email = red_conf.get("register_user", "email")
+    # 如果数据库查找到user，就直接返回。如果没有，则调用注册接口注册一个。
+    # 不管注册与否，直接调用注册接口。
+    set_request("/user/register/", "post", {"username": user, "email": email, "password": password, "password_confirm": password})
+    return user, password
 
 
 def __generator_string(length):
