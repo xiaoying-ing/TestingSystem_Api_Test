@@ -69,8 +69,18 @@ def get_old_user():
     email = red_conf.get("register_user", "email")
     # 如果数据库查找到user，就直接返回。如果没有，则调用注册接口注册一个。
     # 不管注册与否，直接调用注册接口。
-    set_request("/user/register/", "post", {"username": user, "email": email, "password": password, "password_confirm": password})
+    set_request("/user/register/", "post",
+                {"username": user, "email": email, "password": password, "password_confirm": password})
     return user, password
+
+
+import random
+
+
+def get_project_id():
+    db = HandleDB()
+    all_project_id = db.select_all_data('select id from tb_projects group by id')
+    return random.choice(all_project_id)['id']
 
 
 def __generator_string(length):
@@ -101,6 +111,4 @@ def __generator_email(emailType=None, rang=None):
 
 
 if __name__ == '__main__':
-    print(get_new_email())
-    print(get_new_username(8))
-    print(get_password(6))
+    print(get_project_id())
