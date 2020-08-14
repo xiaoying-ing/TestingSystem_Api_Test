@@ -74,13 +74,17 @@ def get_old_user():
     return user, password
 
 
-import random
-
-
 def get_project_id():
     db = HandleDB()
     all_project_id = db.select_all_data('select id from tb_projects group by id')
     return random.choice(all_project_id)['id']
+
+
+def get_old_project_id():
+    db = HandleDB()
+    all_project_id = db.select_all_data('select id from tb_projects group by id')
+    old_project_id = all_project_id[-1]["id"] + 1
+    return old_project_id                        # all_project_id
 
 
 def __generator_string(length):
@@ -112,3 +116,4 @@ def __generator_email(emailType=None, rang=None):
 
 if __name__ == '__main__':
     print(get_project_id())
+    print(get_old_project_id())
