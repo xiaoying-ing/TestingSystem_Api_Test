@@ -16,6 +16,7 @@
 '''
 import unittest
 import json
+from Common.handle_create_time import handle_time
 from jsonpath import jsonpath
 from ddt import ddt, data
 from Common.handle_logger import myLogger
@@ -94,6 +95,11 @@ class TestProjects(unittest.TestCase):
 
         # 处理期望结果
         expected = json.loads(cases['expect_res'])
+        try:
+            if expected['create_time']:
+                expected['create_time'] = handle_time(expected['create_time'])
+        except KeyError:
+            pass
         myLogger.info("期望结果为:{}".format(expected))
         myLogger.info("实际结果为:{}".format(response_projects.json()))
 
