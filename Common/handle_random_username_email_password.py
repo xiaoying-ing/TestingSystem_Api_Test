@@ -84,7 +84,23 @@ def get_old_project_id():
     db = HandleDB()
     all_project_id = db.select_all_data('select id from tb_projects group by id')
     old_project_id = all_project_id[-1]["id"] + 1
-    return old_project_id                        # all_project_id
+    return old_project_id  # all_project_id
+
+
+def get_new_interfaces_name(name_len):
+    db = HandleDB()
+    while True:
+        interface_name = __generator_string(name_len)
+        count = db.get_count('select * from tb_interfaces where `name`="{}"'.format(interface_name))
+        if count == 0:
+            db.close()
+            return interface_name
+
+
+def get_old_interfaces_name():
+    db = HandleDB()
+    all_interfaces_name = db.select_all_data("select `name` from tb_interfaces group by `name`")
+    return random.choice(all_interfaces_name)['name']
 
 
 def __generator_string(length):
@@ -117,3 +133,4 @@ def __generator_email(emailType=None, rang=None):
 if __name__ == '__main__':
     print(get_project_id())
     print(get_old_project_id())
+    print(get_old_interfaces_name())
